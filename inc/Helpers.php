@@ -3,7 +3,7 @@
  * Helpers methods
  * List all your static functions you wish to use globally on your theme
  *
- * @package awps
+ * @package burnt-shake
  */
 
 if ( ! function_exists( 'dd' ) ) {

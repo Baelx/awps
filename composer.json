@@ -24,7 +24,7 @@
 		"wp-coding-standards/wpcs": "^2.3"
 	},
 	"autoload": {
-		"psr-4": { "Awps\\": "./inc" },
+		"psr-4": { "BurntShake\\": "./inc" },
 		"files": [ "./inc/Helpers.php" ]
 	},
 	"scripts": {

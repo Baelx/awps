@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package awps
+ * @package burnt-shake
  */
 
 ?><!DOCTYPE html>
@@ -24,11 +24,12 @@
 <?php wp_body_open(); ?>
 	<div id="page" class="site" <?php echo ! is_customize_preview() ?: 'style="padding: 0 40px;"'; ?>>
 
+	<?php if ( ! is_home() ): ?>
 		<header id="masthead" class="site-header" role="banner">
 
 			<?php
 			if ( is_customize_preview() ) {
-				echo '<div id="awps-header-control"></div>';
+				echo '<div id="burnt-shake-header-control"></div>';
 			}
 			?>
 
@@ -48,7 +49,7 @@
 							$description = get_bloginfo( 'description', 'display' );
 							if ( $description || is_customize_preview() ) :
 							?>
-								<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+								<!-- <p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p> -->
 							<?php
 							endif;
 							?>
@@ -65,7 +66,7 @@
 								array(
 									'theme_location' => 'primary',
 									'menu_id'        => 'primary-menu',
-									'walker'         => new Awps\Core\WalkerNav(),
+									'walker'         => new BurntShake\Core\WalkerNav(),
 								)
 							);
 						endif;
@@ -78,5 +79,6 @@
 		</div><!-- .container-fluid -->
 
 	</header><!-- #masthead -->
+	<?php endif; ?>
 
 	<div id="content" class="site-content">

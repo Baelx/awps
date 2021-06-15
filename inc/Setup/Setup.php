@@ -1,6 +1,6 @@
 <?php
 
-namespace Awps\Setup;
+namespace BurntShake\Setup;
 
 class Setup
 {
@@ -19,7 +19,7 @@ class Setup
         /*
          * You can activate this if you're planning to build a multilingual theme
          */
-        // load_theme_textdomain( 'awps', get_template_directory() . '/languages' );
+        // load_theme_textdomain( 'burnt-shake', get_template_directory() . '/languages' );
 
         /*
          * Default Theme Support options better have
@@ -28,7 +28,7 @@ class Setup
         add_theme_support( 'title-tag' );
         add_theme_support( 'post-thumbnails' );
         add_theme_support( 'customize-selective-refresh-widgets' );
-        
+
         /**
         * Add woocommerce support and woocommerce override
         */
@@ -42,7 +42,7 @@ class Setup
             'caption',
         ) );
 
-        add_theme_support( 'custom-background', apply_filters( 'awps_custom_background_args', array(
+        add_theme_support( 'custom-background', apply_filters( 'burnt-shake_custom_background_args', array(
             'default-color' => 'ffffff',
             'default-image' => '',
         ) ) );
@@ -50,7 +50,7 @@ class Setup
         /*
          * Activate Post formats if you need
          */
-        add_theme_support( 'post-formats', array( 
+        add_theme_support( 'post-formats', array(
             'aside',
             'gallery',
             'link',

@@ -5,7 +5,7 @@
  * @link https://jetpack.com/
  */
 
-namespace Awps\Plugins;
+namespace BurntShake\Plugins;
 
 use Jetpack;
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace Awps\Custom;
+namespace BurntShake\Custom;
 
 /**
  * Extras.

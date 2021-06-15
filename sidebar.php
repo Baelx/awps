@@ -4,22 +4,22 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package awps
+ * @package burnt-shake
  */
 
-if ( ! is_active_sidebar( 'awps-sidebar' ) ) :
+if ( ! is_active_sidebar( 'burnt-shake-sidebar' ) ) :
 	return;
 endif;
 ?>
 
 <?php
 if ( is_customize_preview() ) {
-	echo '<div id="awps-sidebar-control"></div>';
+	echo '<div id="burnt-shake-sidebar-control"></div>';
 }
 ?>
 
 <aside id="secondary" class="widget-area" role="complementary">
 	<?php
-	dynamic_sidebar( 'awps-sidebar' );
+	dynamic_sidebar( 'burnt-shake-sidebar' );
 	?>
 </aside><!-- #secondary -->

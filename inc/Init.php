@@ -5,10 +5,10 @@
  * Every function, hook and action is properly divided and organized inside related folders and files
  * Use the file `config/custom/custom.php` to write your custom functions
  *
- * @package awps
+ * @package burnt-shake
  */
 
-namespace Awps;
+namespace BurntShake;
 
 final class Init
 {

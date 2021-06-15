@@ -1,6 +1,6 @@
 <?php
 
-namespace Awps\Setup;
+namespace BurntShake\Setup;
 
 /**
  * Menus
@@ -22,7 +22,7 @@ class Menus
             Register all your menus here
         */
         register_nav_menus(array(
-            'primary' => esc_html__( 'Primary', 'awps' ),
+            'primary' => esc_html__( 'Primary', 'burnt-shake' ),
         ));
     }
 }

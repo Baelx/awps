@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *
- * @package awps
+ * @package burnt-shake
  */
 
 get_header(); ?>
@@ -20,7 +20,7 @@ get_header(); ?>
 
 					<h1>
 					<?php
-					esc_html_e( 'Oops! That page can&rsquo;t be found.', 'awps' );
+					esc_html_e( 'Oops! That page can&rsquo;t be found.', 'burnt-shake' );
 					?>
 					</h1>
 

@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/reference/functions/add_menu_page/
  *
- * @package awps
+ * @package burnt-shake
  */
 
 ?>
@@ -14,8 +14,8 @@
 	<?php settings_errors(); ?>
 
 	<form method="post" action="options.php">
-		<?php settings_fields( 'awps_options_group' ); ?>
-		<?php do_settings_sections( 'awps' ); ?>
+		<?php settings_fields( 'burnt-shake_options_group' ); ?>
+		<?php do_settings_sections( 'burnt-shake' ); ?>
 		<?php submit_button(); ?>
 	</form>
 </div>

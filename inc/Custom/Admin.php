@@ -1,9 +1,9 @@
 <?php
 
-namespace Awps\Custom;
+namespace BurntShake\Custom;
 
-use Awps\Api\Settings;
-use Awps\Api\Callbacks\SettingsCallback;
+use BurntShake\Api\Settings;
+use BurntShake\Api\Callbacks\SettingsCallback;
 
 /**
  * Admin
@@ -60,19 +60,19 @@ class Admin
 	{
 		// Scripts multidimensional array with styles and scripts
 		$scripts = array(
-			'script' => array( 
-				'jquery', 
+			'script' => array(
+				'jquery',
 				'media_uploader',
 				get_template_directory_uri() . '/assets/dist/js/admin.js'
 			),
-			'style' => array( 
+			'style' => array(
 				get_template_directory_uri() . '/assets/dist/css/admin.css',
 				'wp-color-picker'
 			)
 		);
 
 		// Pages array to where enqueue scripts
-		$pages = array( 'toplevel_page_awps' );
+		$pages = array( 'toplevel_page_burnt-shake' );
 
 		// Enqueue files in Admin area
 		$this->settings->admin_enqueue( $scripts, $pages );
@@ -89,13 +89,13 @@ class Admin
 	{
 		// Scripts multidimensional array with styles and scripts
 		$scripts = array(
-			'style' => array( 
+			'style' => array(
 				get_template_directory_uri() . '/assets/dist/css/admin.css',
 			)
 		);
 
 		// Pages array to where enqueue scripts
-		$pages = array( 'awps_page_awps_faq' );
+		$pages = array( 'burnt-shake_page_burnt-shake_faq' );
 
 		// Enqueue files in Admin area
 		$settings->admin_enqueue( $scripts, $pages )->register();
@@ -112,7 +112,7 @@ class Admin
 				'page_title' => 'AWPS Admin Page',
 				'menu_title' => 'AWPS',
 				'capability' => 'manage_options',
-				'menu_slug' => 'awps',
+				'menu_slug' => 'burnt-shake',
 				'callback' => array( $this->callback, 'admin_index' ),
 				'icon_url' => get_template_directory_uri() . '/assets/dist/images/admin-icon.png',
 				'position' => 110,
@@ -121,11 +121,11 @@ class Admin
 
 		$admin_subpages = array(
 			array(
-				'parent_slug' => 'awps',
-				'page_title' => 'Awps FAQ',
+				'parent_slug' => 'burnt-shake',
+				'page_title' => 'BurntShake FAQ',
 				'menu_title' => 'FAQ',
 				'capability' => 'manage_options',
-				'menu_slug' => 'awps_faq',
+				'menu_slug' => 'burnt-shake_faq',
 				'callback' => array( $this->callback, 'admin_faq' )
 			)
 		);
@@ -145,13 +145,13 @@ class Admin
 		// Register settings
 		$args = array(
 			array(
-				'option_group' => 'awps_options_group',
+				'option_group' => 'burnt-shake_options_group',
 				'option_name' => 'first_name',
-				'callback' => array( $this->callback, 'awps_options_group' )
+				'callback' => array( $this->callback, 'burnt-shake_options_group' )
 			),
 			array(
-				'option_group' => 'awps_options_group',
-				'option_name' => 'awps_test2'
+				'option_group' => 'burnt-shake_options_group',
+				'option_name' => 'burnt-shake_test2'
 			)
 		);
 
@@ -169,10 +169,10 @@ class Admin
 		// Register sections
 		$args = array(
 			array(
-				'id' => 'awps_admin_index',
+				'id' => 'burnt-shake_admin_index',
 				'title' => 'Settings',
-				'callback' => array( $this->callback, 'awps_admin_index' ),
-				'page' => 'awps'
+				'callback' => array( $this->callback, 'burnt-shake_admin_index' ),
+				'page' => 'burnt-shake'
 			)
 		);
 
@@ -193,8 +193,8 @@ class Admin
 				'id' => 'first_name',
 				'title' => 'First Name',
 				'callback' => array( $this->callback, 'first_name' ),
-				'page' => 'awps',
-				'section' => 'awps_admin_index',
+				'page' => 'burnt-shake',
+				'section' => 'burnt-shake_admin_index',
 				'args' => array(
 					'label_for' => 'first_name',
 					'class' => ''

@@ -1,6 +1,6 @@
 <?php
 
-namespace Awps\Core;
+namespace BurntShake\Core;
 
 use Walker_Nav_Menu;
 

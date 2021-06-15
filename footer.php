@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package awps
+ * @package burnt-shake
  */
 
 ?>
@@ -15,7 +15,7 @@
 
 	<?php
 	if ( is_customize_preview() ) {
-		echo '<div id="awps-footer-control" style="margin-top:-30px;position:absolute;"></div>';
+		echo '<div id="burnt-shake-footer-control" style="margin-top:-30px;position:absolute;"></div>';
 	}
 	?>
 
@@ -25,17 +25,10 @@
 			<?php
 				printf(
 					'<a %s href="%s">%s</a>',
-					is_customize_preview() ? 'id="awps-footer-copy-control"' : '',
-					esc_url( __( 'https://github.com/Alecaddd/awps', 'awps' ) ),
-					esc_html( Awps\Api\Customizer::text( 'awps_footer_copy_text' ) )
+					is_customize_preview() ? 'id="burnt-shake-footer-copy-control"' : '',
+					esc_url( __( 'https://github.com/Alecaddd/burnt-shake', 'burnt-shake' ) ),
+					esc_html( BurntShake\Api\Customizer::text( 'burnt-shake_footer_copy_text' ) )
 				);
-			?>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: %1: Theme name. */
-
-				/* translators: %2: Author name. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'awps' ), 'AWPS', '<a href="http://alecaddd.com/" rel="designer">Alecaddd</a>' );
 			?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

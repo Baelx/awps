@@ -1,6 +1,6 @@
 <?php
 
-namespace Awps\Custom;
+namespace BurntShake\Custom;
 
 /**
  * Custom
@@ -14,9 +14,9 @@ class PostTypes
      */
 	public function register() {
 		add_action( 'init', array( $this, 'custom_post_type'), 10 , 4 );
-		add_action( 'after_switch_theme', array( $this, 'rewrite_flush') );	
-	}	
-	
+		add_action( 'after_switch_theme', array( $this, 'rewrite_flush') );
+	}
+
   /**
     * Create Custom Post Types
     * @return The registered post type object, or an error object
@@ -33,7 +33,7 @@ class PostTypes
 				'plural' => 'Artists',
 				'menu_icon' => 'dashicons-admin-customizer',
 				'menu_position' => 18,
-				'text_domain' => 'awps',
+				'text_domain' => 'burnt-shake',
 				'supports' => array( 'title', /*'editor', 'thumbnail' , 'excerpt', 'author', 'comments'*/ ),
 				'description' => 'Artists Custom Post Type',
 				'public' => true,
@@ -52,7 +52,7 @@ class PostTypes
 				'plural'  => 'Books',
 				'menu_icon' => 'dashicons-book-alt',
 				'menu_position' => 18,
-				'text_domain' => 'awps',
+				'text_domain' => 'burnt-shake',
 				'supports' => array( 'title', 'editor', 'thumbnail' , 'excerpt', 'author', /*'comments'*/ ),
 				'description' => 'Books Custom Post Type',
 				'public' => true,
